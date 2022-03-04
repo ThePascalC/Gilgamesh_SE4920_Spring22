@@ -1,0 +1,16 @@
+.infoWindowStyle{
+    position: absolute;
+    box-sizing: border-box;
+    overflow: hidden;
+    top: 0;
+    left: 0px;
+    width:15vw;
+    transform: translate3d(-50%,-100%,0);
+    background-color: white;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 2px 7px 1px rgb(0 0 0 / 30%);
+}
+.btn-map{
+    background-color: #57a8cc;
+    }

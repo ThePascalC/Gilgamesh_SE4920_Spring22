@@ -1,0 +1,18 @@
+[
+	{
+        "id": 1,
+		"name": "Old Drum's Best Friends Dog Park",
+		"lat": 38.770939,
+        "lng": -93.761933,
+        "population": "low",
+        "quality": "average"
+	},
+    {
+        "id": 2,
+		"name": "Selmo Park",
+		"lat": 38.757739,
+        "lng": -93.741559,
+        "population": "high",
+        "quality": "good"
+	}
+]

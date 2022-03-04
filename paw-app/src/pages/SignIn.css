@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .label h3{
+    font-size: 180%;
+    text-align: center;
+    
+    color: #a3a3a3;
+    border-bottom: 1px solid #babcbe;
+  }
+  
+  .label {
+    padding: 25px;
+  }
+  
+  .label h3 .login {
+    color: #494949;
+  }
+  
+  .label h3 .signup {
+    color: #57a8cc;
+  }
+  
+  .email-label {
+    margin-left: 6%;
+  }
+  
+  .email-control {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 110%;
+  
+    padding: 8px 4px 8px 10px;
+  }
+  
+  .password-control {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 110%;
+  
+    padding: 8px 4px 8px 10px;
+  }
+  
+  .password-label {
+    margin-left: 6%;
+  }
+  
+  .submit-group {
+    text-align: center;
+  }
+  
+  .checkbox-group {
+    text-align: center;
+  }
+  
+  .form-group {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;      
+  }
+
+  
+  .layer-group {
+      width: 300px;
+      margin: 60px auto 30px;
+      padding: 10px;
+      position: relative;
+  
+      border: 5px solid #57a8cc;
+      box-shadow: 6px 6px 2px 1px #4889a5;
+  }
+  
+  .form-control:focus {
+    border-color: #167bff;
+    box-shadow: none;
+  }
+  
+  .custom-control-label {
+    font-weight: 400;
+  }
+  
+  .forgot-password,
+  .forgot-password a {
+    text-align: center;
+    font-size: 13px;
+    padding-top: 10px;
+    color: #7f7d7d;
+    margin: 0;
+  }
+  
+  .forgot-password a {
+    color: #167bff;
+  }
+  
+  .btn {
+    width: 95%;
+    margin-top: 5%;
+    padding: 1%;
+    text-align: center;
+    border-radius: 10px;
+  
+    background-color: #64b664;
+    color:#ffffff;
+  }
+  
+  .btn:hover{
+    background-color: #3a7c3a;
+  }
