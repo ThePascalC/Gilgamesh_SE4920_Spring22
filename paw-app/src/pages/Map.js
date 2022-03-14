@@ -1,18 +1,19 @@
 import GoogleMapReact from 'google-map-react';
 import Marker from './Marker';
-import * as parkData from "../parks.json";
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
-
+import ParkList from '../components/ParkComponent';
 
 function GetMap({latitude, longitude}) {
-  const renderMarkers = (map, maps) => {
-    let marker = new maps.Marker({
-      position: { lat: latitude, lng: longitude},
-      map,
-      title: "Marker"
-    }); 
-    return marker;
-  }
+
+
+  
+  // const renderMarkers = (map, maps) => {
+  //   let marker = new maps.Marker({
+  //     position: { lat: latitude, lng: longitude},
+  //     map,
+  //     title: "Marker"
+  //   }); 
+  //   return marker;
+  // }
   const defaultProps = {
     center: {
       lat: 38.7577,
@@ -21,6 +22,7 @@ function GetMap({latitude, longitude}) {
     zoom: 10
   }
 
+
   return (
 <div style={{ height: '80vh', width: '100%' }}>
       <GoogleMapReact
@@ -28,7 +30,7 @@ function GetMap({latitude, longitude}) {
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
       >
-        
+          <ParkList />
           <Marker 
           lat={38.770939}
           lng={-93.761933}
