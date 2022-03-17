@@ -3,17 +3,16 @@ import Marker from './Marker';
 import React from 'react';
 import axios from 'axios';
 class GetMap extends React.Component {
-  // parkState = {
-  //   parksData: []
-  // }
+  constructor(props) {
+    super(props);
+    this.state = { parksData: [] };
+  }
   componentDidMount() {
     axios.get(`http://localhost:8080/api/parks`)
     .then(res => {
-        const parks = res.data;
-        console.log(parks);
-        this.setState({parksData: parks});
-        console.log(this.state.parksData[0].latitude);
-        
+      this.setState({ parksData: res.data }, function () {
+        console.log(this.state)
+      });
     })
 }
 
@@ -26,14 +25,7 @@ class GetMap extends React.Component {
   //   }); 
   //   return marker;
   // }
-  state = {
-    center: {
-      lat: 38.7577,
-      lng: -93.7405
-    },
-    zoom: 10,
-    parksData: []
-}
+
 
 
   render (){ 
@@ -41,22 +33,34 @@ class GetMap extends React.Component {
        <div style={{ height: '80vh', width: '100%' }}>
       <GoogleMapReact
         bootstrapURLKeys={{ }}
-        defaultCenter={this.state.center}
-        defaultZoom={this.state.zoom}
+        defaultCenter={{
+          lat: 38.7577,
+          lng: -93.7405
+        }}
+        defaultZoom={10}
       >
-          
-          {/* <Marker 
-          lat={this.state.parksData.latitude}
-          lng={this.state.parksData.longitude}
+                    {this.state.parksData.map(record => {
+            return (
+
+              <Marker key={record.id}
+                lat={record.latitude}
+                lng={record.longitude}
+                color={"red"}
+              />
+            )
+          })}
+          {/* { <Marker 
+          lat={this.parkState.parksData[0].latitude}
+          lng={this.parkState.parksData[0].longitude}
           color={"red"}          
-    />  */}
+    />  }
           <Marker 
           lat={38.757739}
           lng={-93.741559}
           color={"red"}          
-          />
+          /> */}
         
-        
+
       </GoogleMapReact>
     </div>
     </div>)
