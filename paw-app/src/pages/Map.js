@@ -30,7 +30,7 @@ class GetMap extends React.Component {
 
   render() {
     return (<div>
-      <div style={{ height: '85vh', width: '95%', margin: '3rem auto' }}>
+      <div style={{ height: '80vh', width: '80%', margin: '3rem auto' }}>
         <GoogleMapReact
           bootstrapURLKeys={{}}
           defaultCenter={{
@@ -45,7 +45,7 @@ class GetMap extends React.Component {
               <Marker key={record.id}
                 lat={record.latitude}
                 lng={record.longitude}
-                color={"red"}
+                color={"#57a8cc"}
               />
               // <Marker //key={park.id}
               //   lat={38.757739}
