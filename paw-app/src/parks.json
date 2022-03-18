@@ -14,5 +14,141 @@
         "lng": -93.741559,
         "population": "high",
         "quality": "good"
+	},
+    {
+        "id": 3,
+		"name": "Waggin Trail Dog Park",
+		"lat": 39.1532,
+        "lng": -94.5765,
+        "population": "high",
+        "quality": "good"
+	},
+    {
+        "id": 4,
+		"name": "Libert Dog Park",
+		"lat": 39.2339,
+        "lng": -94.3885,
+        "population": "high",
+        "quality": "good"
+	},
+    {
+        "id": 5,
+		"name": "Chapel Hill Dog Park",
+		"lat": 39.11171,
+        "lng": -94.79539,
+        "population": "high",
+        "quality": "good"
+	},
+    {
+        "id": 6,
+		"name": "Santa Fe Park",
+		"lat": 39.0668,
+        "lng": -94.4239,
+        "population": "high",
+        "quality": "good"
+	},
+    {
+        "id": 7,
+		"name": "Dogwood Park",
+		"lat": 39.9368,
+        "lng": -94.3826,
+        "population": "high",
+        "quality": "good"
+	},
+    {
+        "id": 8,
+		"name": "Blue Spirngs Dog Park",
+		"lat": 39.0295,
+        "lng": -94.2356,
+        "population": "high",
+        "quality": "good"
+	},
+    {
+        "id": 9,
+		"name": "Tail & Trails",
+		"lat": 38.8720,
+        "lng": -94.5068,
+        "population": "high",
+        "quality": "good"
+	},
+    {
+        "id": 10,
+		"name": "Leawoof Dog Park",
+		"lat": 38.9318,
+        "lng": -94.6135,
+        "population": "high",
+        "quality": "good"
+	},
+    {
+        "id": 11,
+		"name": "Swope Dog Park",
+		"lat": 38.9974,
+        "lng": -94.5275,
+        "population": "high",
+        "quality": "good"
+	},
+    {
+        "id": 12,
+		"name": "Heritage Park",
+		"lat": 38.8379,
+        "lng": -94.7591,
+        "population": "high",
+        "quality": "good"
+	},
+    {
+        "id": 13,
+		"name": "Stoll Park",
+		"lat": 38.9151,
+        "lng": -94.7316,
+        "population": "high",
+        "quality": "good"
+	},
+    {
+        "id": 14,
+		"name": "St. John Dog Park",
+		"lat": 39.11402,
+        "lng": -94.61846,
+        "population": "high",
+        "quality": "good"
+	},
+    {
+        "id": 15,
+		"name": "Platte Landing",
+		"lat": 39.18449,
+        "lng": -94.69486,
+        "population": "high",
+        "quality": "good"
+	},
+    {
+        "id": 16,
+		"name": "Shawnee Mission Park",
+		"lat": 38.97744,
+        "lng": -94.79751,
+        "population": "high",
+        "quality": "good"
+	},
+    {
+        "id": 17,
+		"name": "Pierson Dog Park",
+		"lat": 38.06606,
+        "lng": -94.70999,
+        "population": "high",
+        "quality": "good"
+	},
+    {
+        "id": 19,
+		"name": "Gillham Dog Park",
+		"lat": 39.06496,
+        "lng": -94.58075,
+        "population": "high",
+        "quality": "good"
+	},
+    {
+        "id": 20,
+		"name": "Residential Roof Top Dog Park",
+		"lat": 39.09930,
+        "lng": -94.58236,
+        "population": "high",
+        "quality": "good"
 	}
 ]

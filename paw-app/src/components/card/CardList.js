@@ -1,11 +1,11 @@
-import SignUpItem from './MeetupItem';
-import classes from './MeetupList.module.css';
+import CardBox from './CardItem';
+import classes from './CardList.module.css';
 
 function MeetupList(props) {
   return (
     <ul className={classes.list}>
       {props.meetups.map((meetup) => (
-        <SignUpItem
+        <CardBox
           key={meetup.id}
           id={meetup.id}
           image={meetup.image}

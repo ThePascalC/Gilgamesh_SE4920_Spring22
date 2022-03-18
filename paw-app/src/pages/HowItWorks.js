@@ -1,6 +1,5 @@
-import { useState, useEffect } from 'react';
 
-import MeetupList from '../components/meetups/MeetupList';
+import MeetupList from '../components/card/CardList';
 
 const DUMMY_DATA = [
   {
@@ -17,7 +16,7 @@ const DUMMY_DATA = [
 function HowItWorksPage() {
   return (
     <section>
-      <h1>How Pawsible Works</h1>
+      {/* <h1>How Pawsible Works</h1> */}
       <MeetupList meetups={DUMMY_DATA} />
     </section>
   );

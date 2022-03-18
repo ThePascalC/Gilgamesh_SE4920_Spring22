@@ -1,5 +1,5 @@
 import InfoWindow from './InfoWindow';
-import './Marker.css';
+import './CssPages/Marker.css';
 import { useState } from 'react';
 import { Button } from 'react-bootstrap';
 
@@ -14,7 +14,7 @@ const Marker = (props) => {
         onClick={() => setShow(!show)}
       />
       <div className='pulse' />
-      {show ? <InfoWindow style /> : ""}
+      {show ? <InfoWindow setTrigger={() => setShow(false)} /> : ""}
       </>
     );
   };

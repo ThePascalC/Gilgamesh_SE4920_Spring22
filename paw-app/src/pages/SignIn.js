@@ -1,4 +1,4 @@
-import "./SignIn.css";
+import "./CssPages/SignIn.css";
 import React, { Component, useState } from 'react';
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -36,7 +36,7 @@ export default function LoginFunction() {
                         </div>
 
                         <div className='submit-group'>
-                            <button type="submit" className="btn" disabled={!validateForm()}>Sign in</button>
+                            <button type="submit" className="SignInBtn" disabled={!validateForm()}>Sign in</button>
                             <p className="forgot-password text-right">
                                 Forgot <a href="#">password?</a>
                             </p>

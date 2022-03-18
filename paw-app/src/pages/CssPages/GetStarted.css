@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    border-radius: 1px;
+}
+.welcome {
+    color: #ffffff;
+    position: absolute;
+    left: 8%;
+    top: 35%;
+}
+
+.line {
+    border-top: #33fe87 10px solid;
+    width: 12vh;
+    position: absolute;
+    left: 8%;
+    top: 42%;
+    border-radius: 10px;
+}
+
+.boxOne {
+    width: 40vh;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    background-color: #06304a;
+}
+
+.app-wrapper {
+    width: 50vh;
+    padding: 10px;
+    position: relative;
+    background-color: #e6eaed;
+}
+
+.container {
+    display: flex;
+    width: 90vh;
+    height: 70vh;
+    position: absolute;
+    left: 27%;
+    top: 15%;
+}
+
+.container-p {
+    color: #b4c1c9;
+    position: absolute;
+    left: 7.5%;
+    top: 45%;
+    text-align: left
+}
+
+.app-login {
+    position: absolute;
+    left: 9%;
+    top: 15%;
+}
+
+.btn-app {
+    width: 40vh;
+    margin-bottom: 1vh;
+    height: 5vh;
+    background-color: #ffffff;
+    border-radius: 3px;
+}
+
+.btn-app:hover {
+    background-color: #E5E5E5;
+}
+
+.email,
+.password,
+.confirmPassword {
+    display: block;
+    position: relative;
+    left: 5.5%;
+    top: 33vh;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 110%;
+    padding: 8px 4px 8px 10px;
+    width: 90vh;
+    outline: none;
+}
+
+.input {
+    width: 40vh;
+    height: 3vh;
+}
+
+.submit {
+    width: 36vh;
+    height: 5vh;
+    background-color: #33fe87;
+    border-radius: 3px;
+    position: relative;
+    left: 11.5%;
+    top: 35vh;
+    border: none;
+}
+
+.submit:hover {
+    background-color: #30E98F;
+}
+
+.line-input {
+    border-top: #06304a 3px solid;
+    width: 18vh;
+    position: absolute;
+    left: 9%;
+    top: 45%;
+    border-radius: 10px;
+}
+
+.line-input2 {
+    border-top: #06304a 3px solid;
+    width: 18vh;
+    position: absolute;
+    left: 53%;
+    top: 45%;
+    border-radius: 10px;
+}
+
+.or {
+    color: #06304a;
+    position: absolute;
+    left: 47.5%;
+    top: 41.5%;
+}
+.googleLogo{
+    height: 50px;
+    position: relative;
+    left: -5%;
+}
+.appleLogo{
+    height: 50px;
+    position: relative;
+    left:-3.5%;
+}
+.faceLogo{
+    height: 50px;
+    position: relative;
+    left: -6%;
+}

@@ -13,7 +13,6 @@
   .label {
     padding: 25px;
   }
-  
   .label h3 .login {
     color: #494949;
   }
@@ -97,17 +96,16 @@
     color: #167bff;
   }
   
-  .btn {
+  .SignInBtn {
     width: 95%;
     margin-top: 5%;
     padding: 1%;
     text-align: center;
     border-radius: 10px;
-  
     background-color: #64b664;
     color:#ffffff;
   }
   
-  .btn:hover{
+  .SignInBtn:hover{
     background-color: #3a7c3a;
   }
