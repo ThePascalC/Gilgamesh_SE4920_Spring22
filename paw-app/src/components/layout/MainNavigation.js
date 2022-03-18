@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 import classes from './MainNavigation.module.css';
-import pawLogo from './path/images.png';
+// import pawLogo from './path/images.png';
 function MainNavigation() {
 
   return (
