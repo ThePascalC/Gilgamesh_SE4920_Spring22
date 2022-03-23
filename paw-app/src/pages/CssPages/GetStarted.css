@@ -24,6 +24,7 @@
     position: relative;
     text-align: center;
     background-color: #06304a;
+    border-radius: .5rem 0 0 .5rem ;
 }
 
 .app-wrapper {
@@ -31,6 +32,7 @@
     padding: 10px;
     position: relative;
     background-color: #e6eaed;
+    border-radius: 0 .5rem .5rem 0 ;
 }
 
 .container {
@@ -48,6 +50,7 @@
     left: 7.5%;
     top: 45%;
     text-align: left
+    
 }
 
 .app-login {
@@ -61,7 +64,7 @@
     margin-bottom: 1vh;
     height: 5vh;
     background-color: #ffffff;
-    border-radius: 3px;
+    border-radius: 2rem;
 }
 
 .btn-app:hover {
@@ -128,17 +131,17 @@
     top: 41.5%;
 }
 .googleLogo{
-    height: 50px;
+    height: 40px;
     position: relative;
     left: -5%;
 }
 .appleLogo{
-    height: 50px;
+    height: 40px;
     position: relative;
     left:-3.5%;
 }
 .faceLogo{
-    height: 50px;
+    height: 40px;
     position: relative;
     left: -6%;
 }

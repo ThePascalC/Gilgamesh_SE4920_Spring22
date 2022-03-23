@@ -1,88 +1,120 @@
 * {
     box-sizing: border-box;
   }
-  
+  /* OutsideBox */
+  .layer-group {
+    width: 30%;
+    margin: 60px auto 30px;
+    padding: 10px;
+    position: relative;
+    background-color: #06304a;
+    border: 5px solid #06304a;
+    border-radius: .5rem;
+  }
+  .form-group {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;      
+  }
+  /* Toptext */
   .label h3{
     font-size: 180%;
     text-align: center;
-    
     color: #a3a3a3;
-    border-bottom: 1px solid #babcbe;
+    border-bottom: 1px solid #33fe87;
   }
-  
   .label {
     padding: 25px;
   }
   .label h3 .login {
-    color: #494949;
+    color: #e6eaed;
   }
-  
   .label h3 .signup {
     color: #57a8cc;
   }
-  
-  .email-label {
-    margin-left: 6%;
+  /* Three app buttons */
+  .app-signIn {
+    width: 60%;
+    margin-top: 2%;
+    margin-left: 20%;
+    padding: 1%;
+    text-align: center;
+    background-color: #ffffff;
+    color:#000000;
+    border-radius: 2rem;
   }
-  
+  .app-signIn:hover{
+    background-color: #E5E5E5;
+  }
+  /* Email inputbox */
   .email-control {
+    width: 52%;
     display: block;
     position: relative;
     margin-left: auto;
     margin-right: auto;
     font-size: 110%;
-  
     padding: 8px 4px 8px 10px;
   }
-  
+  /* Password inputbox */
   .password-control {
+    width: 52%;
     display: block;
     position: relative;
     margin-left: auto;
     margin-right: auto;
     font-size: 110%;
-  
     padding: 8px 4px 8px 10px;
   }
   
   .password-label {
     margin-left: 6%;
   }
+  /* Sign In */
+  .SignInBtn {
+    width: 60%;
+    margin-top: 5%;
+    padding: 1%;
+    text-align: center;
+    background-color: #33fe87;
+    color:#000000;
+  }
   
+  .SignInBtn:hover{
+    background-color: #30E98F;
+  }
   .submit-group {
     text-align: center;
   }
-  
-  .checkbox-group {
+  /* Or Line */
+  .or-line {
+    margin-top: 2%;
     text-align: center;
+    color: #e6eaed;
+    font-size: 100%;
   }
   
-  .form-group {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;      
-  }
-
-  
-  .layer-group {
-      width: 300px;
-      margin: 60px auto 30px;
-      padding: 10px;
-      position: relative;
-  
-      border: 5px solid #57a8cc;
-      box-shadow: 6px 6px 2px 1px #4889a5;
+  .or-line:before,
+  .or-line:after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 23%;
   }
   
-  .form-control:focus {
-    border-color: #167bff;
-    box-shadow: none;
+  .or-line:before {
+    right: 0.5em;
+    margin-left: -50%;
   }
   
-  .custom-control-label {
-    font-weight: 400;
+  .or-line:after {
+    left: 0.5em;
+    margin-right: -50%;
   }
-  
+  /* Forgot Password */
   .forgot-password,
   .forgot-password a {
     text-align: center;
@@ -94,18 +126,4 @@
   
   .forgot-password a {
     color: #167bff;
-  }
-  
-  .SignInBtn {
-    width: 95%;
-    margin-top: 5%;
-    padding: 1%;
-    text-align: center;
-    border-radius: 10px;
-    background-color: #64b664;
-    color:#ffffff;
-  }
-  
-  .SignInBtn:hover{
-    background-color: #3a7c3a;
   }
