@@ -1,0 +1,40 @@
+
+.main-component {
+    width: 90%;
+    height: 100%;
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    /* outline: 5px solid green; */
+}
+.MainText{
+    padding-top: 1%;
+    text-align: center;
+}
+.DogPic{
+    text-align: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 2%;
+
+}
+.lineBreak{
+    margin-top: 5%;
+    color: black;
+    width: 55%;
+    margin: auto;
+}
+.break{
+    margin-bottom: 10vh;
+    padding-bottom: 10in;
+    padding-top: 10vh;
+    margin-top: 10in;
+
+}
+.Info{
+    margin:  2% 30% 10% 30%;
+    font-size: 1.5rem;
+}

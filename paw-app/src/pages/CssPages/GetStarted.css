@@ -124,12 +124,38 @@
     border-radius: 10px;
 }
 
-.or {
-    color: #06304a;
+.or-line2 {
     position: absolute;
-    left: 47.5%;
     top: 41.5%;
 }
+.or-line2 {
+    margin-top: 2%;
+    width: 95%;
+    text-align: center;
+    color: #06304a;
+    font-size: 100%;
+  }
+  
+  .or-line2:before,
+  .or-line2:after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 23%;
+  }
+  
+  .or-line2:before {
+    right: 0.5em;
+    margin-left: -50%;
+  }
+  
+  .or-line2:after {
+    left: 0.5em;
+    margin-right: -50%;
+  }
 .googleLogo{
     height: 40px;
     position: relative;

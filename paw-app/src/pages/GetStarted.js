@@ -31,7 +31,6 @@ function GetStarted() {
     }
 
     return (
-        <section>
             <form>
                 <div className="container">
                     <div className='boxOne'>
@@ -55,9 +54,7 @@ function GetStarted() {
                             <button type="submit" className="btn-app"  onClick={handelFormSubmit} ><img src={FaceLogo} className='faceLogo'/>Sign In with Apple</button>
                             </div>
                         </form>
-                        <div className="line-input"></div>
-                        <p className="or">or</p>
-                        <div className="line-input2"></div>
+                        <h1 className="or-line2">OR</h1>
                         <form className='form-wrapper'>
                             <div className='email'>
                                 <input className='input' type='email' name='email' value={values.email}placeholder="Email Address" />
@@ -78,7 +75,6 @@ function GetStarted() {
                 </div>
                 
             </form>
-        </section>
     );
 }
 

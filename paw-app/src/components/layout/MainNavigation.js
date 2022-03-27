@@ -13,10 +13,10 @@ function MainNavigation() {
       <nav>
         <ul>
           <li>
-            <Link to='/how-it-works'>How It Works</Link>
+            <Link to='/how-it-works'>About Us</Link>
           </li>
           <li>
-            <Link to='/data'>Data</Link>
+            <Link to='/Data'>Data</Link>
           </li>
           <li>
             <Link to='/get-started'>Get Started</Link>
