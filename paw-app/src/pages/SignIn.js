@@ -1,6 +1,5 @@
 import "./CssPages/SignIn.css";
 import React, { Component, useState } from 'react';
-import Button from "react-bootstrap/Button";
 import Googlelogo from '../path/google.png';
 import AppleLogo from '../path/apple.png';
 import FaceLogo from '../path/facebook.png';
@@ -27,7 +26,7 @@ export default function LoginFunction() {
                     <div className='button-Facebook'>
                         <button type="submit" className="app-signIn"><img src={FaceLogo} className='faceLogo'/>Sign In with Apple</button>
                     </div>
-                    <h1 className="or-line">OR</h1>
+                    <h1 className="dashline">OR</h1>
                     <div className="email-group">
                         <label><i class='icon-us'><span class='email-label'></span></i></label>
                         <input type="email" className="email-control" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter email" />

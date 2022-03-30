@@ -42,7 +42,7 @@ function GetStarted() {
                             <p className='container-p'>Create an account to start finding a park fit <br></br>for your four legged friend</p>
                         </div>
                     </div>
-                    <div className='app-wrapper'>
+                    <div className='app-box'>
                         <form className='app-login'>
                             <div className='app-Google' >
                                 <button type="submit" className="btn-app"  onClick={handelFormSubmit} ><img src={Googlelogo} className='googleLogo' />Sign In with Google</button>
@@ -54,7 +54,7 @@ function GetStarted() {
                             <button type="submit" className="btn-app"  onClick={handelFormSubmit} ><img src={FaceLogo} className='faceLogo'/>Sign In with Apple</button>
                             </div>
                         </form>
-                        <h1 className="or-line2">OR</h1>
+                        <h5 className="or-line2">OR</h5>
                         <form className='form-wrapper'>
                             <div className='email'>
                                 <input className='input' type='email' name='email' value={values.email}placeholder="Email Address" />

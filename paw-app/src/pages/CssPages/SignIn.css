@@ -87,15 +87,15 @@
     text-align: center;
   }
   /* Or Line */
-  .or-line {
+  .dashline {
     margin-top: 2%;
     text-align: center;
     color: #e6eaed;
     font-size: 100%;
   }
   
-  .or-line:before,
-  .or-line:after {
+  .dashline:before,
+  .dashline:after {
     background-color: #000;
     content: "";
     display: inline-block;
@@ -105,12 +105,12 @@
     width: 23%;
   }
   
-  .or-line:before {
+  .dashline:before {
     right: 0.5em;
     margin-left: -50%;
   }
   
-  .or-line:after {
+  .dashline:after {
     left: 0.5em;
     margin-right: -50%;
   }

@@ -1,56 +1,49 @@
-* {
-    box-sizing: border-box;
-    border-radius: 1px;
+.container {
+    display: flex;
+    width: 90vh;
+    height: 70vh;
+    position: relative;
+    left: 10.5%;
+    top: 15%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+.container-p {
+    color: #b4c1c9;
+    position: absolute;
+    left: 7.5%;
+    top: 45%;
+    text-align: left;
+    font-size: 100%;
 }
 .welcome {
     color: #ffffff;
     position: absolute;
     left: 8%;
     top: 35%;
+    font-size: 100%;
 }
-
 .line {
     border-top: #33fe87 10px solid;
     width: 12vh;
-    position: absolute;
+    position: relative;
     left: 8%;
     top: 42%;
     border-radius: 10px;
 }
-
 .boxOne {
-    width: 40vh;
-    padding: 10px;
+    width: 30%;
     position: relative;
     text-align: center;
     background-color: #06304a;
     border-radius: .5rem 0 0 .5rem ;
 }
-
-.app-wrapper {
-    width: 50vh;
+.app-box {
+    width: 40%;
     padding: 10px;
     position: relative;
     background-color: #e6eaed;
     border-radius: 0 .5rem .5rem 0 ;
-}
-
-.container {
-    display: flex;
-    width: 90vh;
-    height: 70vh;
-    position: absolute;
-    left: 27%;
-    top: 15%;
-}
-
-.container-p {
-    color: #b4c1c9;
-    position: absolute;
-    left: 7.5%;
-    top: 45%;
-    text-align: left
-    
 }
 
 .app-login {
@@ -78,11 +71,10 @@
     position: relative;
     left: 5.5%;
     top: 33vh;
-    margin-left: auto;
+    margin-left: center;
     margin-right: auto;
-    font-size: 110%;
     padding: 8px 4px 8px 10px;
-    width: 90vh;
+    width: 1000%;
     outline: none;
 }
 
@@ -105,37 +97,15 @@
 .submit:hover {
     background-color: #30E98F;
 }
-
-.line-input {
-    border-top: #06304a 3px solid;
-    width: 18vh;
-    position: absolute;
-    left: 9%;
-    top: 45%;
-    border-radius: 10px;
-}
-
-.line-input2 {
-    border-top: #06304a 3px solid;
-    width: 18vh;
-    position: absolute;
-    left: 53%;
-    top: 45%;
-    border-radius: 10px;
-}
-
 .or-line2 {
     position: absolute;
     top: 41.5%;
-}
-.or-line2 {
     margin-top: 2%;
     width: 95%;
     text-align: center;
     color: #06304a;
     font-size: 100%;
   }
-  
   .or-line2:before,
   .or-line2:after {
     background-color: #000;
@@ -146,12 +116,10 @@
     vertical-align: middle;
     width: 23%;
   }
-  
   .or-line2:before {
     right: 0.5em;
     margin-left: -50%;
   }
-  
   .or-line2:after {
     left: 0.5em;
     margin-right: -50%;
