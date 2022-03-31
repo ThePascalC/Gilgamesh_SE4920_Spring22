@@ -42,7 +42,12 @@ class GetMap extends React.Component {
           {this.state.parksData.map(record => {
             return (
 
-              <Marker key={record.id}
+              <Marker 
+                title={record.title}
+                rating={record.rating}
+                population={record.population}
+                quality={record.quality}
+                key={record.id}
                 lat={record.latitude}
                 lng={record.longitude}
                 color={"#57a8cc"}

@@ -2,15 +2,13 @@ import './CssPages/InfoWindow.css';
 import { Button } from 'react-bootstrap';
 
 const InfoWindow = (props) => {
-    // const { name, rating, population, quality } = props;
-
     return (
         <div className="infoWindowStyle">
             <div className='Header'></div>
             <Button className="close-btn" onClick={() => props.setTrigger(false)}>X</Button>
             <div className='Top-info'>
                 <div className='Park-Info'>
-                    <h3>Dogg Park</h3>
+                    <h3>{props.title}</h3>
                     {/* <div className='btn-fav'>
                         <Button className='btn btn-star'>*</Button>
                     </div> */}
