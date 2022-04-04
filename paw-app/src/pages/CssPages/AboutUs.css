@@ -19,7 +19,9 @@
     align-items: center;
     margin: auto;
     margin-bottom: 2%;
-
+    animation-name: fadeIn;
+    animation-fill-mode: both;
+    animation-duration: 1s;
 }
 .lineBreak{
     margin-top: 5%;
@@ -38,3 +40,13 @@
     margin:  2% 30% 10% 30%;
     font-size: 1.5rem;
 }
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity:1
+    }
+  }

@@ -14,7 +14,10 @@
   .form-group {
     display: block;
     margin-left: auto;
-    margin-right: auto;      
+    margin-right: auto;
+    animation-name: fadeIn;
+    animation-fill-mode: both;
+    animation-duration: 1s;
   }
   /* Toptext */
   .label h3{
@@ -126,4 +129,14 @@
   
   .forgot-password a {
     color: #167bff;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity:1
+    }
   }
