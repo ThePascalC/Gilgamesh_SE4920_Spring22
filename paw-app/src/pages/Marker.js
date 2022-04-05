@@ -16,7 +16,7 @@ const Marker = (props) => {
         onClick={() => setShow(!show)}
       />
       <div className='pulse' />
-      {show ? <InfoWindow title={title} population={population} rating={rating} quality={quality} setTrigger={() => setShow(false)} /> : "Hello World"}
+      {show ? <InfoWindow title={title} population={population} rating={rating} quality={quality} setTrigger={() => setShow(false)} /> : ""}
       </>
     );
   };

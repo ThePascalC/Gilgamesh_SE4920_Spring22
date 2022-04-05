@@ -20,6 +20,11 @@ public class Park {
     @Column(name = "longitude")
     private double longitude;
 
+
+    @OneToMany
+
+
+
     @Column(name = "rating")
     private double rating;
 

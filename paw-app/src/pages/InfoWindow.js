@@ -2,6 +2,10 @@ import './CssPages/InfoWindow.css';
 import { Button } from 'react-bootstrap';
 
 const InfoWindow = (props) => {
+
+    const populationValues = ["Low", "Medium", "High", "Packed"];
+    const qualityValues = ["Poor", "Average", "Great"];
+
     console.log(props)
     return (
         <div className="infoWindowStyle">
@@ -18,8 +22,8 @@ const InfoWindow = (props) => {
                 </div>
             </div>
             <div className='mid-info'>
-                <h5>Population: {props.population}</h5>
-                <h5>Quality: {props.quality}</h5>
+                <h5>Population: {populationValues[props.population]}</h5>
+                <h5>Quality: {qualityValues[props.quality]}</h5>
                 <Button className='btn btn-feedback'>Give FeedBack</Button>
             </div>
             <div className='input-info'>
