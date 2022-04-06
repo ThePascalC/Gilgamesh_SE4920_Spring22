@@ -10,8 +10,6 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @ManyToOne
-    private long park_id;
 
     @Column(name = "rating")
     private double rating;
@@ -29,15 +27,7 @@ public class Review {
     public void setId(long id) {
         this.id = id;
     }
-
-    public long getPark_id() {
-        return park_id;
-    }
-
-    public void setPark_id(long park_id) {
-        this.park_id = park_id;
-    }
-
+    
     public double getRating() {
         return rating;
     }
