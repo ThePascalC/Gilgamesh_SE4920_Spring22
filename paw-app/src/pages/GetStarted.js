@@ -48,10 +48,10 @@ function GetStarted() {
                                 <button type="submit" className="btn-app"  onClick={handelFormSubmit} ><img src={Googlelogo} className='googleLogo' />Sign In with Google</button>
                             </div>
                             <div className='app-Facebook'>
-                            <button type="submit" className="btn-app"  onClick={handelFormSubmit} ><img src={AppleLogo} className='appleLogo' />Sign In with Facebook</button>
+                            <button type="submit" className="btn-app"  onClick={handelFormSubmit} ><img src={FaceLogo} className='appleLogo' />Sign In with Facebook</button>
                             </div>
                             <div className='app-Apple'>
-                            <button type="submit" className="btn-app"  onClick={handelFormSubmit} ><img src={FaceLogo} className='faceLogo'/>Sign In with Apple</button>
+                            <button type="submit" className="btn-app"  onClick={handelFormSubmit} ><img src={AppleLogo} className='faceLogo'/>Sign In with Apple</button>
                             </div>
                         </form>
                         <h5 className="or-line2">OR</h5>
