@@ -1,13 +1,20 @@
 import "./CssPages/Data.css";
 import React, { Component, useState } from 'react';
 
-function Data() {
+const Data = (props) => {
+
+  const populationValues = ["Low", "Medium", "High", "Packed"];
+  const qualityValues = ["Poor", "Average", "Great"];
+
+  console.log(props)
   
 
   return (
-    <section>
+      <section className="con">
       <div className="Park">
         <h1 className="ParkName">Old Drum's Best Friends Dog Park</h1>
+        <h2>Population: {populationValues[props.population]}</h2>
+        <h2>Quality: {qualityValues[props.quality]}</h2>
         <h2 className="ParkRating">5/5</h2>
       </div>
       <div className="Park">
@@ -16,7 +23,7 @@ function Data() {
       </div>
       <div className="Park">
         <h1 className="ParkName">Dogwood Park</h1>
-        <h2 className="ParkRating">4/5</h2>
+        <h2>Quality: {qualityValues[props.quality]}</h2>
       </div>
     </section>
   );

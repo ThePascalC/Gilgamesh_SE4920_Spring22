@@ -21,10 +21,10 @@ export default function LoginFunction() {
                         <button type="submit" className="app-signIn"><img src={Googlelogo} className='googleLogo' />Sign In with Google</button>
                     </div>
                     <div className='button-Apple'>
-                        <button type="submit" className="app-signIn"><img src={AppleLogo} className='appleLogo' />Sign In with Facebook</button>
+                        <button type="submit" className="app-signIn"><img src={FaceLogo} className='appleLogo' />Sign In with Facebook</button>
                         </div>
                     <div className='button-Facebook'>
-                        <button type="submit" className="app-signIn"><img src={FaceLogo} className='faceLogo'/>Sign In with Apple</button>
+                        <button type="submit" className="app-signIn"><img src={AppleLogo} className='faceLogo'/>Sign In with Apple</button>
                     </div>
                     <h1 className="dashline">OR</h1>
                     <div className="email-group">

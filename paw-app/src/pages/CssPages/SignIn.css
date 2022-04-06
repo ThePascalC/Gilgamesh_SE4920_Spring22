@@ -4,8 +4,9 @@
   /* OutsideBox */
   .layer-group {
     width: 30%;
-    margin: 60px auto 30px;
+    margin: 60px auto 300px;
     padding: 10px;
+    
     position: relative;
     background-color: #06304a;
     border: 5px solid #06304a;
