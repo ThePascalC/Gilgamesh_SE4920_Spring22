@@ -73,7 +73,7 @@
     display: block;
     position: relative;
     left: 5.5%;
-    top: 33vh;
+    top: 20vh;
     margin-left: center;
     margin-right: auto;
     padding: 8px 4px 8px 10px;
@@ -93,7 +93,7 @@
     border-radius: 3px;
     position: relative;
     left: 11.5%;
-    top: 35vh;
+    top: 22vh;
     border: none;
 }
 

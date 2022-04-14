@@ -17,16 +17,6 @@ export default function LoginFunction() {
                     <div className='label'>
                         <h3><span class='login'>Login to Pawsible</span></h3>
                     </div>
-                    <div className='button-Google' >
-                        <button type="submit" className="app-signIn"><img src={Googlelogo} className='googleLogo' />Sign In with Google</button>
-                    </div>
-                    <div className='button-Apple'>
-                        <button type="submit" className="app-signIn"><img src={FaceLogo} className='appleLogo' />Sign In with Facebook</button>
-                        </div>
-                    <div className='button-Facebook'>
-                        <button type="submit" className="app-signIn"><img src={AppleLogo} className='faceLogo'/>Sign In with Apple</button>
-                    </div>
-                    <h1 className="dashline">OR</h1>
                     <div className="email-group">
                         <label><i class='icon-us'><span class='email-label'></span></i></label>
                         <input type="email" className="email-control" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter email" />
