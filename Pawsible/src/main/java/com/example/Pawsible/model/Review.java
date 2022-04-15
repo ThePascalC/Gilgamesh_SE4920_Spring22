@@ -2,6 +2,9 @@ package com.example.Pawsible.model;
 
 import javax.persistence.*;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 @Table(name = "reviews")
 public class Review {
@@ -10,6 +13,8 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @OneToMany(mappedBy = "reviews", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Review> reviews = new HashSet<>();
 
     @Column(name = "rating")
     private double rating;
@@ -19,6 +24,14 @@ public class Review {
 
     @Column(name = "quality")
     private int quality;
+
+    public Set<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(Set<Review> reviews) {
+        this.reviews = reviews;
+    }
 
     public long getId() {
         return id;

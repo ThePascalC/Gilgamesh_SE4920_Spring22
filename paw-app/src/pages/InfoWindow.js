@@ -67,6 +67,13 @@ const InfoWindow = (props) => {
                         <option value="Average">Average</option>
                         <option value="Great">Great</option>
                     </select>
+                    <select name="population-items" id="population-items">
+                        <option value="Low">Low</option>
+                        <option value="Average">Average</option>
+                        <option value="High">High</option>
+                        <option value="Packed">Packed</option>
+
+                    </select>
                 </div>
                 <br></br>
                 <button className='btn btn-update'>Update</button>

@@ -14,6 +14,9 @@ public class Park {
     @Column(name = "title")
     private String title;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Review review;
+
     @Column(name = "latitude")
     private double latitude;
 
@@ -28,6 +31,25 @@ public class Park {
 
     @Column(name = "population")
     private double population;
+
+    @Column(name = "address")
+    private String address;
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public Review getReview() {
+        return review;
+    }
+
+    public void setReview(Review review) {
+        this.review = review;
+    }
 
     public long getId() {
         return id;
