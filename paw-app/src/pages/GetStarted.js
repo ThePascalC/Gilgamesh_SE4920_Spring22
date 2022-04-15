@@ -1,11 +1,9 @@
-
-import { Component } from "react";
+import React, { Component } from "react";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import { isEmail } from "validator";
 import AuthService from "../services/auth.service";
-import React from "react";
 const required = value => {
   if (!value) {
     return (
@@ -110,11 +108,6 @@ export default class Register extends Component {
     return (
       <div className="col-md-12">
         <div className="card card-container">
-          <img
-            src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-            alt="profile-img"
-            className="profile-img-card"
-          />
           <Form
             onSubmit={this.handleRegister}
             ref={c => {
@@ -187,4 +180,3 @@ export default class Register extends Component {
     );
   }
 }
-
