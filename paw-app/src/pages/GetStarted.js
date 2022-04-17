@@ -4,6 +4,7 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import { isEmail } from "validator";
 import AuthService from "../services/auth.service";
+import "./CssPages/GetStarted.css";
 const required = value => {
   if (!value) {
     return (
@@ -107,6 +108,15 @@ export default class Register extends Component {
   render() {
     return (
       <div className="container">
+        <div className='boxOne'>
+          <div>
+            <h2><span class='welcome'>Welcome To Pawsible</span></h2>
+          </div>
+          <div className="line"></div>
+          <div>
+            <p className='container-p'>Create an account to start finding a park fit <br></br>for your four legged friend</p>
+          </div>
+        </div>
         <div className="card card-container">
           <Form
             onSubmit={this.handleRegister}
@@ -117,33 +127,33 @@ export default class Register extends Component {
             {!this.state.successful && (
               <div>
                 <div className="form-group">
-                  <label htmlFor="username">Username</label>
                   <Input
                     type="text"
                     className="form-control"
                     name="username"
+                    placeholder="Username"
                     value={this.state.username}
                     onChange={this.onChangeUsername}
                     validations={[required, vusername]}
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="email">Email</label>
                   <Input
                     type="text"
                     className="form-control"
                     name="email"
+                    placeholder="Email Address"
                     value={this.state.email}
                     onChange={this.onChangeEmail}
                     validations={[required, email]}
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="password">Password</label>
                   <Input
                     type="password"
                     className="form-control"
                     name="password"
+                    placeholder="Password"
                     value={this.state.password}
                     onChange={this.onChangePassword}
                     validations={[required, vpassword]}

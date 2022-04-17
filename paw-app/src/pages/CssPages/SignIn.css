@@ -2,22 +2,25 @@
     box-sizing: border-box;
   }
   /* OutsideBox */
-  .layer-group {
+  .top-layer {
     width: 30%;
+    height: 30rem;
     margin: 60px auto 300px;
     padding: 10px;
     position: relative;
     background-color: #06304a;
     border: 5px solid #06304a;
     border-radius: .5rem;
+    box-shadow: 0 0 20px #A6A6A6;
   }
-  .form-group {
+  .signin-form-group {
     display: block;
     margin-left: auto;
     margin-right: auto;
     animation-name: fadeIn;
     animation-fill-mode: both;
     animation-duration: 1s;
+    
   }
   /* Toptext */
   .label h3{
@@ -45,12 +48,10 @@
     background-color: #ffffff;
     color:#000000;
     border-radius: 2rem;
-  }
-  .app-signIn:hover{
-    background-color: #E5E5E5;
+    
   }
   /* Email inputbox */
-  .email-control {
+  .input-control {
     width: 52%;
     display: block;
     position: relative;
@@ -60,30 +61,24 @@
     padding: 8px 4px 8px 10px;
   }
   /* Password inputbox */
-  .password-control {
-    width: 52%;
-    display: block;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 110%;
-    padding: 8px 4px 8px 10px;
-  }
   
   .password-label {
     margin-left: 6%;
   }
   /* Sign In */
-  .SignInBtn {
-    width: 60%;
+  .signin-btn.btn-primary.btn-block {
+    width: 30%;
     margin-top: 5%;
     padding: 1%;
     text-align: center;
     background-color: #33fe87;
     color:#000000;
+    position: relative;
+    left: 35.5%;
+    border: none;
   }
   
-  .SignInBtn:hover{
+  .signin-btn.btn-primary.btn-block:hover{
     background-color: #30E98F;
   }
   .submit-group {
@@ -96,40 +91,7 @@
     color: #e6eaed;
     font-size: 100%;
   }
-  
-  .dashline:before,
-  .dashline:after {
-    background-color: #000;
-    content: "";
-    display: inline-block;
-    height: 1px;
-    position: relative;
-    vertical-align: middle;
-    width: 23%;
-  }
-  
-  .dashline:before {
-    right: 0.5em;
-    margin-left: -50%;
-  }
-  
-  .dashline:after {
-    left: 0.5em;
-    margin-right: -50%;
-  }
-  /* Forgot Password */
-  .forgot-password,
-  .forgot-password a {
-    text-align: center;
-    font-size: 13px;
-    padding-top: 10px;
-    color: #7f7d7d;
-    margin: 0;
-  }
-  
-  .forgot-password a {
-    color: #167bff;
-  }
+
 
   @keyframes fadeIn {
     0% {

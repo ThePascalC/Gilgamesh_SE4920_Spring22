@@ -15,9 +15,9 @@ function MainNavigation() {
           <li>
             <Link to='/how-it-works'>About Us</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to='/Data'>Data</Link>
-          </li>
+          </li> */}
           <li>
             <Link to='/get-started'>Get Started</Link>
           </li>
