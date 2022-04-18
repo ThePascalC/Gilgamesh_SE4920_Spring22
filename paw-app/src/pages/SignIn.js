@@ -4,6 +4,7 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import { isEmail } from "validator";
 import AuthService from "../services/auth.service";
+import "./CssPages/SignIn.css";
 const required = value => {
   if (!value) {
     return (
@@ -78,31 +79,31 @@ export default class Login extends Component {
               this.form = c;
             }}
           >
-            <div className="form-group">
-              <label htmlFor="username">Username</label>
+            <div className="input-control">
               <Input
                 type="text"
                 className="form-control"
                 name="username"
+                placeholder="Username"
                 value={this.state.username}
                 onChange={this.onChangeUsername}
                 validations={[required]}
               />
             </div>
-            <div className="form-group">
-              <label htmlFor="password">Password</label>
+            <div className="input-control">
               <Input
                 type="password"
                 className="form-control"
                 name="password"
+                placeholder="Password"
                 value={this.state.password}
                 onChange={this.onChangePassword}
                 validations={[required]}
               />
             </div>
-            <div className="form-group">
+            <div className="signin-form-group">
               <button
-                className="btn btn-primary btn-block"
+                className="signin-btn btn-primary btn-block"
                 disabled={this.state.loading}
               >
                 {this.state.loading && (
