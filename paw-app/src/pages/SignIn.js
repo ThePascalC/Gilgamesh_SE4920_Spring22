@@ -71,8 +71,11 @@ export default class Login extends Component {
   }
   render() {
     return (
-      <div className="col-md-4 offset-md-4">
-        <div className="card">
+      <div className="top-layer">
+        <div className='label'>
+          <h3><span class='login'>Login to Pawsible</span></h3>
+        </div>
+        <div className="signin-container">
           <Form
             onSubmit={this.handleLogin}
             ref={c => {

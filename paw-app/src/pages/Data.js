@@ -10,7 +10,7 @@ const Data = (props) => {
   
 
   return (
-      <div className="container con">
+      <section className="con">
       <div className="Park">
         <h1 className="ParkName">Old Drum's Best Friends Dog Park</h1>
         <h2>Population: {populationValues[props.population]}</h2>
@@ -25,7 +25,7 @@ const Data = (props) => {
         <h1 className="ParkName">Dogwood Park</h1>
         <h2>Quality: {qualityValues[props.quality]}</h2>
       </div>
-    </div>
+    </section>
   );
 }
 
