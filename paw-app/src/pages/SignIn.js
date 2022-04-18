@@ -76,7 +76,7 @@ class Login extends Component {
     return (
       <div className="top-layer">
         <div className='label'>
-          <h3><span class='login'>Login to Pawsible</span></h3>
+          <h3><span className='login'>Login to Pawsible</span></h3>
         </div>
         <div className="signin-container">
           <Form

@@ -6,12 +6,19 @@ import { useEffect,useState } from 'react';
 // import pawLogo from './path/images.png';
 function MainNavigation() {
   const [currentUser, setCurrentUser] = useState('');
+
+  function logOut(){
+    AuthService.logout();
+    console.log("Log Out")
+  }
+
   useEffect(() => {
     const user = AuthService.getCurrentUser();
     if(user){
       setCurrentUser(user);
     }
   },[]);
+
   return (
     <header className={classes.header}>
       <div className={classes.logo}><Link to='/'>
@@ -31,7 +38,9 @@ function MainNavigation() {
             <Link to='/get-started'>Register</Link>
           </li>
           <li>
-            <Link to='/sign-in'>Sign In</Link>
+          <a href="/sign-in" className="nav-link" onClick={logOut()}>
+                  Log Out
+          </a>
           </li>
           </>
           ) : 

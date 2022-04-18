@@ -23,7 +23,7 @@ function App() {
       setCurrentUser(user);
     }
   },[]);
-  
+  console.log(currentUser);
 
   return (
     <Layout>
