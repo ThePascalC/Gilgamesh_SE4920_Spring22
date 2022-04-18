@@ -7,21 +7,8 @@ import SignInPage from './pages/SignIn';
 import Layout from './components/layout/Layout';
 import Footer from './pages/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { useState } from 'react';
 
 function App() {
-
-  //this.logOut = this.logOut.bind(this);
-
-  const [currentUser, setCurrentUser] = useState();
-
-
-
-  // function logOut() {
-  //   AuthService.logout();
-  // };
-
-
   return (
     <Layout>
       <Routes>
