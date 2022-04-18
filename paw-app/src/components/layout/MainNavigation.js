@@ -1,10 +1,17 @@
-import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-
+import AuthService from '../../services/auth.service';
 import classes from './MainNavigation.module.css';
+import { useEffect,useState } from 'react';
+
 // import pawLogo from './path/images.png';
 function MainNavigation() {
-
+  const [currentUser, setCurrentUser] = useState('');
+  useEffect(() => {
+    const user = AuthService.getCurrentUser();
+    if(user){
+      setCurrentUser(user);
+    }
+  },[]);
   return (
     <header className={classes.header}>
       <div className={classes.logo}><Link to='/'>
@@ -18,12 +25,26 @@ function MainNavigation() {
           {/* <li>
             <Link to='/Data'>Data</Link>
           </li> */}
+          {currentUser ? (
+            <>
           <li>
-            <Link to='/get-started'>Get Started</Link>
+            <Link to='/get-started'>Register</Link>
           </li>
           <li>
             <Link to='/sign-in'>Sign In</Link>
           </li>
+          </>
+          ) : 
+          (
+            <>
+          <li>
+            <Link to='/get-started'>Register</Link>
+          </li>
+          <li>
+            <Link to='/sign-in'>Sign In</Link>
+          </li>
+          </>
+          )}
         </ul>
       </nav>
     </header>
