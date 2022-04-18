@@ -2,7 +2,6 @@ import GoogleMapReact from 'google-map-react';
 import Marker from './Marker';
 import React from 'react';
 import axios from 'axios';
-import AuthService from "../services/auth.service";
 
 
 class GetMap extends React.Component {
@@ -10,7 +9,6 @@ class GetMap extends React.Component {
     super(props);
     this.state = { 
       parksData: [],
-      currentUser: AuthService.getCurrentUser()
     };
   }
   componentDidMount() {
@@ -21,7 +19,7 @@ class GetMap extends React.Component {
         });
       })
   }
-  
+
 
 
   render() {

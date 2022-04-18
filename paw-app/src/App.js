@@ -1,4 +1,4 @@
-import { Routes, Route, withRouter } from 'react-router-dom';
+import { Switch, Route, withRouter } from 'react-router-dom';
 import MapPage from './pages/Map';
 import GetStartedPage from './pages/GetStarted';
 import HowItWorksPage from './pages/HowItWorks';
@@ -13,10 +13,10 @@ import { useEffect,useState } from 'react';
 function App() {
 
   const [currentUser, setCurrentUser] = useState('');
-
-  function logOut() {
-     AuthService.logout();
-   }
+  // this.logOut = this.logOut.bind(this);
+  // logOut() {
+  //    AuthService.logout();
+  //  }
   useEffect(() => {
     const user = AuthService.getCurrentUser();
     if(user){
@@ -27,18 +27,18 @@ function App() {
 
   return (
     <Layout>
-      <Routes>
-      <Route path='/' exact element={<MapPage />}>
+      <Switch>
+      <Route path='/' exact component={MapPage }>
         </Route>
-        <Route path='/Data' exact element={<Data />}>
+        <Route path='/Data' exact component={Data }>
         </Route>
-        <Route path='/get-started' element={<GetStartedPage />}>
+        <Route path='/get-started' component={GetStartedPage }>
         </Route>
-        <Route path='/how-it-works' element={ <HowItWorksPage />}>
+        <Route path='/how-it-works' component={ HowItWorksPage }>
         </Route>
-        <Route path='/sign-in' element={ <SignInPage /> }>
+        <Route path='/sign-in' component={ SignInPage }>
         </Route>
-      </Routes>
+      </Switch>
       <Footer />
     </Layout>
   );
