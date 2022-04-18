@@ -70,8 +70,8 @@ export default class Login extends Component {
   }
   render() {
     return (
-      <div className="col-md-12">
-        <div className="card card-container">
+      <div className="col-md-4 offset-md-4">
+        <div className="card">
           <Form
             onSubmit={this.handleLogin}
             ref={c => {

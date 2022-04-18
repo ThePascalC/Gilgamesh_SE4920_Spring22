@@ -106,7 +106,7 @@ export default class Register extends Component {
   }
   render() {
     return (
-      <div className="container">
+      <div className="col-md-4 offset-md-4" style={{padding: 20}}>
         <div className="card card-container">
           <Form
             onSubmit={this.handleRegister}
