@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
-import { isEmail } from "validator";
 import AuthService from "../services/auth.service";
-import { useNavigate } from 'react-router-dom';
 
 
 import "./CssPages/SignIn.css";
@@ -76,7 +74,7 @@ class Login extends Component {
     return (
       <div className="top-layer">
         <div className='label'>
-          <h3><span class='login'>Login to Pawsible</span></h3>
+          <h3><span className='login'>Login to Pawsible</span></h3>
         </div>
         <div className="signin-container">
           <Form

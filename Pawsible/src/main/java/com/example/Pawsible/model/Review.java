@@ -13,8 +13,8 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @OneToMany(mappedBy = "reviews", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<Review> reviews = new HashSet<>();
+    @Column(name = "park_id")
+    private long park_id;
 
     @Column(name = "rating")
     private double rating;
@@ -25,12 +25,12 @@ public class Review {
     @Column(name = "quality")
     private int quality;
 
-    public Set<Review> getReviews() {
-        return reviews;
+    public long getPark_id() {
+        return park_id;
     }
 
-    public void setReviews(Set<Review> reviews) {
-        this.reviews = reviews;
+    public void setPark_id(long park_id) {
+        this.park_id = park_id;
     }
 
     public long getId() {
