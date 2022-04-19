@@ -6,21 +6,33 @@ import Favorite from "@material-ui/icons/Favorite";
 import IconButton from '@material-ui/core/IconButton';
 import { Button, Modal, } from "react-bootstrap";
 import reviewService from '../services/review.service';
+import axios from 'axios';
 const InfoWindow = (props) => {
 
-    console.log(props)
     const populationValues = ["Low", "Medium", "High", "Packed"];
     const qualityValues = ["Poor", "Average", "Great"];
     const ratingValues = ["One", "Two", "Three", "Four", "Five"];
     const [population, setPopulation] = useState('')
     const [quality, setQuality] = useState('')
     const [rating, setRating] = useState('')
-    
-
     const [showGroup, setShowGroup] = useState(false);
     const [modalEvent, setModalEvent] = useState();
-
     const [showCreateGroupModal, setShowCreateGroupModal] = useState(false);
+    const [parkReviewInfo, setParkReviewInfo] = useState('')
+
+    useEffect(()=>{
+        getParkInfo();
+    });
+    function getParkInfo(){
+        axios
+        .get("http://localhost:8080/api/reviewInfo?park_id=" + props.id)
+        .then((response) => {
+            setParkReviewInfo(...response.data);
+        })
+        .catch((error) => console.log(error.response));
+    }
+
+
     function handleShowCreateGroupModal() {
         setShowCreateGroupModal(true)
     }
@@ -50,34 +62,23 @@ const InfoWindow = (props) => {
         console.log(props.id, qualityValues.indexOf(quality), populationValues.indexOf(population), ratingValues.indexOf(rating))
         reviewService.createReview(props.id, qualityValues.indexOf(quality)+1, populationValues.indexOf(population)+1, ratingValues.indexOf(rating)+1)
         handleGroupClose();
-        props.setTrigger(false);
+        //props.setTrigger(false);
     }
-
+    
     return (
         <div className="infoWindowStyle">
             <div className='windowHeader'></div>
             <button className="close-btn" onClick={() => props.setTrigger(false)}>X</button>
             <div className='Top-info'>
                 <div className='Park-Info'>
-                    <h3>{props.title}{fav &&
-                        <IconButton style={{ color: "#30E98reF" }} onClick={() => { setFav(!fav) }}>
-                            <FavoriteIcon style={{ width: 32, height: 32 }}></FavoriteIcon>
-                        </IconButton>
-                    }
-                        {!fav &&
-                            <IconButton style={{ color: "#30E98F" }} onClick={() => { setFav(!fav) }}>
-                                <Favorite style={{ width: 32, height: 32 }}></Favorite>
-                            </IconButton>
-                        }</h3>
-                    <p>Rating: {props.rating}/5</p>
-                    <h6>Address:</h6>
-                    <h5>Current Population: {populationValues[props.population]}</h5>
-                    <p className='updateTime'>last updated 7:55pm</p>
+                    <h3>{props.title}</h3>
+                    <h4>Rating: {isNaN(parkReviewInfo.rating) ? 'Not Rated' : (Math.round(parseFloat(parkReviewInfo.rating) * 10) / 10) + "/5"}</h4>
+                    <h6>Address: {props.address}</h6>
                 </div>
             </div>
             <div className='mid-info'>
-                <h5>Average Population: {populationValues[props.population]}</h5>
-                <h5>Quality: {qualityValues[props.quality]}</h5>
+                <h5>Population: {populationValues[parseInt(parkReviewInfo.population)-1]}</h5>
+                <h5>Quality: {qualityValues[parseInt(parkReviewInfo.quality)-1]}</h5>
             </div>
             <div className='bottom-info'>
                 <Modal show={showGroup} onHide={handleGroupClose}>
@@ -88,16 +89,18 @@ const InfoWindow = (props) => {
                             </Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
+                            
                             <div className="review-popup">
                                 <div className="review-fields">
+                                <div className="form-group" style={{top: 0}}>
                                     <div className="Quality-dropBox"><b>Park Quality:</b>
-                                        <select name="quality" id="quality-items" onChange={onChangeQuality}>
+                                        <select className='form-select' name="quality" id="quality-items" onChange={onChangeQuality}>
                                             <option value="Poor">Poor</option>
                                             <option value="Average">Average</option>
                                             <option value="Great">Great</option>
                                         </select>
                                         <div className="population-dropBox"><b>Park Population:</b>
-                                            <select name="population" id="population-items" onChange={onChangePopulation}>
+                                            <select className='form-select' name="population" id="population-items" onChange={onChangePopulation}>
                                                 <option value="Low">Low</option>
                                                 <option value="Medium">Medium</option>
                                                 <option value="High">High</option>
@@ -105,7 +108,7 @@ const InfoWindow = (props) => {
                                             </select>
                                         </div>
                                         <div className="rating-dropBox"><b>Park Rating:</b>
-                                            <select name="rating-items" id="population-items" onChange={onChangeRating}>
+                                            <select  className='form-select' name="rating-items" id="population-items" onChange={onChangeRating}>
                                                 <option value="One">1</option>
                                                 <option value="Two">2</option>
                                                 <option value="Three">3</option>
@@ -115,7 +118,9 @@ const InfoWindow = (props) => {
                                         </div>
                                     </div>
                                 </div>
+                                </div>
                             </div>
+                            
                         </Modal.Body>
                         <Modal.Footer className="d-flex justify-content-between">
                             <Button variant="primary" onClick={createReview}>

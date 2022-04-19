@@ -45,6 +45,7 @@ class GetMap extends React.Component {
                 id={record.id}
                 lat={record.latitude}
                 lng={record.longitude}
+                address={record.address}
                 color={"#57a8cc"}
               />
 

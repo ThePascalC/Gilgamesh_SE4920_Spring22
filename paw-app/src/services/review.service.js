@@ -13,6 +13,9 @@ class ReviewService {
       })
       .catch((error) => console.log( error.response.request.response ));
     }
-    
+    getReviewInfo(park_id){
+      return axios.get(API_URL + "reviewInfo?park_id=" + park_id)
+
+    }
   }
   export default new ReviewService();
