@@ -25,26 +25,32 @@ console.log(currentUser)
         Pawsible</Link></div>
       <nav>
         <ul>
-          <li>
-            <Link to='/how-it-works'>About Us</Link>
-          </li>
           {/* <li>
             <Link to='/Data'>Data</Link>
           </li> */}
           {currentUser ? (
             <>
           <li>
+            <Link to='/'>Dog Parks</Link>
+          </li>            
+          <li>
+            <Link to='/how-it-works'>About Us</Link>
+          </li>
+          <li>
             <Link to={{pathname: '/Account', state:{currentUser: currentUser} }}>{currentUser.username}</Link>
           </li>
           <li>
           <a href="/sign-in" className="nav-link" onClick={logOut()}>
-                  Log Out
+          Log Out
           </a>
           </li>
           </>
           ) : 
           (
             <>
+          <li>
+            <Link to='/how-it-works'>About Us</Link>
+          </li>
           <li>
             <Link to='/get-started'>Register</Link>
           </li>
