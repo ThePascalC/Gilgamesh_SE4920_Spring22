@@ -9,7 +9,6 @@ function MainNavigation() {
 
   function logOut(){
     AuthService.logout();
-    console.log("Log Out")
   }
 
   useEffect(() => {
