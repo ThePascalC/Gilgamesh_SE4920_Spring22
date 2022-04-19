@@ -1,6 +1,7 @@
 package com.example.Pawsible.controller;
 
 import com.example.Pawsible.model.Park;
+import com.example.Pawsible.model.ParkReviewInfo;
 import com.example.Pawsible.model.Review;
 import com.example.Pawsible.repository.ParkRepository;
 import com.example.Pawsible.repository.ReviewRepository;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
+import java.util.Set;
 
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
@@ -30,5 +32,8 @@ public class ReviewController {
         Review savedReview = reviewRepository.save(review);
         return ResponseEntity.created(new URI("/reviews/" + savedReview.getId())).body(savedReview);
     }
-    
+    @GetMapping("reviewInfo")
+    public Set<ParkReviewInfo> getParkReviewInfo(@RequestParam Long park_id){
+        return reviewRepository.getParkInformation(park_id);
+    }
 }

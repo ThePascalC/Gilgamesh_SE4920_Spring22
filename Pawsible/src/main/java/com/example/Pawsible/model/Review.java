@@ -13,8 +13,12 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "park_id")
-    private long park_id;
+
+    @Column(name="park_id")
+    private Long park_id;
+
+//    @Column(name = "park_id")
+//    private long park_id;
 
     @Column(name = "rating")
     private double rating;
@@ -25,7 +29,8 @@ public class Review {
     @Column(name = "quality")
     private int quality;
 
-    public long getPark_id() {
+
+        public long getPark_id() {
         return park_id;
     }
 

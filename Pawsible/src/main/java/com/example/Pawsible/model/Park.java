@@ -1,6 +1,7 @@
 package com.example.Pawsible.model;
 
 import javax.persistence.*;
+import java.util.Set;
 
 
 @Entity
@@ -14,8 +15,6 @@ public class Park {
     @Column(name = "title")
     private String title;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Review review;
 
     @Column(name = "latitude")
     private double latitude;
@@ -41,14 +40,6 @@ public class Park {
 
     public void setAddress(String address) {
         this.address = address;
-    }
-
-    public Review getReview() {
-        return review;
-    }
-
-    public void setReview(Review review) {
-        this.review = review;
     }
 
     public long getId() {

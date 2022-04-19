@@ -17,7 +17,7 @@ function MainNavigation() {
       setCurrentUser(user);
     }
   },[]);
-
+console.log(currentUser)
   return (
     <header className={classes.header}>
       <div className={classes.logo}><Link to='/'>

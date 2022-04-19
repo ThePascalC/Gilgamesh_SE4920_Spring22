@@ -13,6 +13,8 @@ const Marker = (props) => {
         style={{ backgroundColor: color, cursor: 'pointer'}}
         title={title}
         onClick={() => setShow(!show)}
+        onChange={() => setShow(!show)}
+
       />
       <div className='pulse' />
       {show ? <InfoWindow id={id} title={title} population={population} rating={rating} quality={quality} setTrigger={() => setShow(false)} /> : ""}

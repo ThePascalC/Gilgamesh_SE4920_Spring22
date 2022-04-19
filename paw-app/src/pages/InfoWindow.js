@@ -48,8 +48,9 @@ const InfoWindow = (props) => {
         e.preventDefault();
         // do something here
         console.log(props.id, qualityValues.indexOf(quality), populationValues.indexOf(population), ratingValues.indexOf(rating))
-        reviewService.createReview(props.id, qualityValues.indexOf(quality), populationValues.indexOf(population), ratingValues.indexOf(rating))
+        reviewService.createReview(props.id, qualityValues.indexOf(quality)+1, populationValues.indexOf(population)+1, ratingValues.indexOf(rating)+1)
         handleGroupClose();
+        props.setTrigger(false);
     }
 
     return (
