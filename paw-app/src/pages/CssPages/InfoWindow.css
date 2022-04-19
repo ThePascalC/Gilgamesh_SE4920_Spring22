@@ -70,9 +70,6 @@
 .rate > label:hover ~ input:checked ~ label {
     color: #c59b08;
 }
-.review-popup{
-    width: 500rem;
-}
-.Mobal.body{
-    width: 500rem;
+.popup-box{
+    
 }

@@ -63,6 +63,7 @@ const InfoWindow = (props) => {
             </div>
             <div className='bottom-info'>
                 <Modal show={showGroup} onHide={handleGroupClose}>
+                <div className='popup-box'>
                     <Modal.Header closeButton>
                         <Modal.Title>
                             {props.title}
@@ -70,7 +71,7 @@ const InfoWindow = (props) => {
                     </Modal.Header>
                     <Modal.Body>
                         <div className="review-popup">
-                            <div className="input-fields">
+                            <div className="review-fields">
                                 <div className="category-dropBox"><b>Park Quality:</b>
                                     <select name="quality-items" id="quality-items">
                                         <option value="Poor">Poor</option>
@@ -84,30 +85,27 @@ const InfoWindow = (props) => {
                                         <option value="High">High</option>
                                         <option value="Packed">Packed</option>
                                     </select>
-                                    <div className="rate">
-                                        <input type="radio" id="star5" name="rate" value="5" />
-                                        <label htmlFor="star5" title="text">5 stars</label>
-                                        <input type="radio" id="star4" name="rate" value="4" />
-                                        <label htmlFor="star4" title="text">4 stars</label>
-                                        <input type="radio" id="star3" name="rate" value="3" />
-                                        <label htmlFor="star3" title="text">3 stars</label>
-                                        <input type="radio" id="star2" name="rate" value="2" />
-                                        <label htmlFor="star2" title="text">2 stars</label>
-                                        <input type="radio" id="star1" name="rate" value="1" />
-                                        <label htmlFor="star1" title="text">1 star</label>
-                                    </div>
+                                    <div className="category-dropBox"><b>Park Rating:</b></div>
+                                    <select name="rating-items" id="population-items">
+                                        <option value="One">1</option>
+                                        <option value="Two">2</option>
+                                        <option value="Three">3</option>
+                                        <option value="Four">4</option>
+                                        <option value="Five">5</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
                     </Modal.Body>
                     <Modal.Footer className="d-flex justify-content-between">
                         <Button variant="primary" onClick={handleGroupClose}>
-                            Confirm Group
+                            Confirm Review
                         </Button>
                         <Button variant="secondary" onClick={handleGroupClose}>
                             Close
                         </Button>
                     </Modal.Footer>
+                    </div>
                 </Modal>
                 <button variant="success" className="btn btn-update" onClick={handleGroupClick}>Leave Review</button>
             </div>
