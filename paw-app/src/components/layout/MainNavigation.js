@@ -34,7 +34,7 @@ console.log(currentUser)
           {currentUser ? (
             <>
           <li>
-            <Link to='/Account'>{currentUser.username}</Link>
+            <Link to={{pathname: '/Account', state:{currentUser: currentUser} }}>{currentUser.username}</Link>
           </li>
           <li>
           <a href="/sign-in" className="nav-link" onClick={logOut()}>
