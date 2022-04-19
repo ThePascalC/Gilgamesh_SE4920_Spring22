@@ -7,7 +7,12 @@ class ReviewService {
         quality,
         population,
         rating
-      });
+      })
+      .then(response => {
+          console.log(response)
+      })
+      .catch((error) => console.log( error.response.request.response ));
     }
+    
   }
   export default new ReviewService();

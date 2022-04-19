@@ -42,6 +42,7 @@ class GetMap extends React.Component {
                 population={record.population}
                 quality={record.quality}
                 key={record.id}
+                id={record.id}
                 lat={record.latitude}
                 lng={record.longitude}
                 color={"#57a8cc"}

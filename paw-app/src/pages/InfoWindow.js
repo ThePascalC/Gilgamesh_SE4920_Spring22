@@ -11,10 +11,11 @@ const InfoWindow = (props) => {
     console.log(props)
     const populationValues = ["Low", "Medium", "High", "Packed"];
     const qualityValues = ["Poor", "Average", "Great"];
+    const ratingValues = ["One", "Two", "Three", "Four", "Five"];
     const [population, setPopulation] = useState('')
     const [quality, setQuality] = useState('')
     const [rating, setRating] = useState('')
-
+    
 
     const [showGroup, setShowGroup] = useState(false);
     const [modalEvent, setModalEvent] = useState();
@@ -46,11 +47,9 @@ const InfoWindow = (props) => {
     const createReview = e => {
         e.preventDefault();
         // do something here
-        const data = new FormData(e.target);
-        data.append('quality', data.get('quality'));
-        data.append('population', data.get('population'));
-        data.append('rating', data.get('rate'));
-        reviewService.createReview(props.id, data.get('quality'), data.get('population'), data.get('rate'))
+        console.log(props.id, qualityValues.indexOf(quality), populationValues.indexOf(population), ratingValues.indexOf(rating))
+        reviewService.createReview(props.id, qualityValues.indexOf(quality), populationValues.indexOf(population), ratingValues.indexOf(rating))
+        handleGroupClose();
     }
 
     return (
@@ -99,13 +98,13 @@ const InfoWindow = (props) => {
                                         <div className="population-dropBox"><b>Park Population:</b>
                                             <select name="population" id="population-items" onChange={onChangePopulation}>
                                                 <option value="Low">Low</option>
-                                                <option value="Average">Average</option>
+                                                <option value="Medium">Medium</option>
                                                 <option value="High">High</option>
                                                 <option value="Packed">Packed</option>
                                             </select>
                                         </div>
                                         <div className="rating-dropBox"><b>Park Rating:</b>
-                                            <select name="rating-items" id="population-items">
+                                            <select name="rating-items" id="population-items" onChange={onChangeRating}>
                                                 <option value="One">1</option>
                                                 <option value="Two">2</option>
                                                 <option value="Three">3</option>
