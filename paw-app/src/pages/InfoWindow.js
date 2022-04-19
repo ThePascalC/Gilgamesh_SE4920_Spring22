@@ -36,13 +36,13 @@ const InfoWindow = (props) => {
     }
     const onChangeQuality = e => {
         setQuality(e.target.value);
-      }
+    }
     const onChangePopulation = e => {
         setPopulation(e.target.value);
-      }
+    }
     const onChangeRating = e => {
         setRating(e.target.value);
-      }
+    }
     const createReview = e => {
         e.preventDefault();
         // do something here
@@ -50,8 +50,8 @@ const InfoWindow = (props) => {
         data.append('quality', data.get('quality'));
         data.append('population', data.get('population'));
         data.append('rating', data.get('rate'));
-        reviewService.createReview(props.id,data.get('quality'),data.get('population'), data.get('rate'))
-        }
+        reviewService.createReview(props.id, data.get('quality'), data.get('population'), data.get('rate'))
+    }
 
     return (
         <div className="infoWindowStyle">
@@ -81,48 +81,50 @@ const InfoWindow = (props) => {
             </div>
             <div className='bottom-info'>
                 <Modal show={showGroup} onHide={handleGroupClose}>
-                <div className='popup-box'>
-                    <Modal.Header closeButton>
-                        <Modal.Title>
-                            {props.title}
-                        </Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <div className="review-popup">
-                            <div className="review-fields">
-                                <div className="category-dropBox"><b>Park Quality:</b>
-                                    <select name="quality" id="quality-items" onChange={onChangeQuality}>
-                                        <option value="Poor">Poor</option>
-                                        <option value="Average">Average</option>
-                                        <option value="Great">Great</option>
-                                    </select>
-                                    <div className="category-dropBox"><b>Park Population:</b></div>
-                                    <select name="population" id="population-items" onChange={onChangePopulation}>
-                                        <option value="Low">Low</option>
-                                        <option value="Average">Average</option>
-                                        <option value="High">High</option>
-                                        <option value="Packed">Packed</option>
-                                    </select>
-                                    <div className="rating-dropBox"><b>Park Rating:</b></div>
-                                    <select name="rating-items" id="population-items">
-                                        <option value="One">1</option>
-                                        <option value="Two">2</option>
-                                        <option value="Three">3</option>
-                                        <option value="Four">4</option>
-                                        <option value="Five">5</option>
-                                    </select>
+                    <div className='popup-box'>
+                        <Modal.Header closeButton>
+                            <Modal.Title>
+                                {props.title}
+                            </Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            <div className="review-popup">
+                                <div className="review-fields">
+                                    <div className="Quality-dropBox"><b>Park Quality:</b>
+                                        <select name="quality" id="quality-items" onChange={onChangeQuality}>
+                                            <option value="Poor">Poor</option>
+                                            <option value="Average">Average</option>
+                                            <option value="Great">Great</option>
+                                        </select>
+                                        <div className="population-dropBox"><b>Park Population:</b>
+                                            <select name="population" id="population-items" onChange={onChangePopulation}>
+                                                <option value="Low">Low</option>
+                                                <option value="Average">Average</option>
+                                                <option value="High">High</option>
+                                                <option value="Packed">Packed</option>
+                                            </select>
+                                        </div>
+                                        <div className="rating-dropBox"><b>Park Rating:</b>
+                                            <select name="rating-items" id="population-items">
+                                                <option value="One">1</option>
+                                                <option value="Two">2</option>
+                                                <option value="Three">3</option>
+                                                <option value="Four">4</option>
+                                                <option value="Five">5</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </Modal.Body>
-                    <Modal.Footer className="d-flex justify-content-between">
-                        <Button variant="primary" onClick={createReview}>
-                            Confirm Group
-                        </Button>
-                        <Button variant="secondary" onClick={handleGroupClose}>
-                            Close
-                        </Button>
-                    </Modal.Footer>
+                        </Modal.Body>
+                        <Modal.Footer className="d-flex justify-content-between">
+                            <Button variant="primary" onClick={createReview}>
+                                Confirm Review
+                            </Button>
+                            <Button variant="secondary" onClick={handleGroupClose}>
+                                Close
+                            </Button>
+                        </Modal.Footer>
                     </div>
                 </Modal>
                 <button variant="success" className="btn btn-update" onClick={handleGroupClick}>Leave Review</button>
