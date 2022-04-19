@@ -103,6 +103,7 @@ const InfoWindow = (props) => {
                                         <option value="High">High</option>
                                         <option value="Packed">Packed</option>
                                     </select>
+                                    <div className="rating-dropBox"><b>Park Rating:</b></div>
                                     <select name="rating-items" id="population-items">
                                         <option value="One">1</option>
                                         <option value="Two">2</option>
