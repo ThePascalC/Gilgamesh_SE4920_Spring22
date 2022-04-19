@@ -3,6 +3,7 @@ import MapPage from './pages/Map';
 import GetStartedPage from './pages/GetStarted';
 import HowItWorksPage from './pages/HowItWorks';
 import Data from './pages/Data'
+import AccountPage from './pages/Account'; 
 import SignInPage from './pages/SignIn';
 import Layout from './components/layout/Layout';
 import Footer from './pages/Footer';
@@ -37,6 +38,8 @@ function App() {
         <Route path='/how-it-works' component={ HowItWorksPage }>
         </Route>
         <Route path='/sign-in' component={ SignInPage }>
+        </Route>
+        <Route path='/account' component={ AccountPage }>
         </Route>
       </Switch>
       <Footer />

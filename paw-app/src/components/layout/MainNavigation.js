@@ -34,7 +34,7 @@ function MainNavigation() {
           {currentUser ? (
             <>
           <li>
-            <Link to='/get-started'>Register</Link>
+            <Link to='/Account'>{currentUser.username}</Link>
           </li>
           <li>
           <a href="/sign-in" className="nav-link" onClick={logOut()}>
