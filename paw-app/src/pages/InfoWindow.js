@@ -5,11 +5,17 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import Favorite from "@material-ui/icons/Favorite";
 import IconButton from '@material-ui/core/IconButton';
 import { Button, Modal, } from "react-bootstrap";
+import reviewService from '../services/review.service';
 const InfoWindow = (props) => {
 
     console.log(props)
     const populationValues = ["Low", "Medium", "High", "Packed"];
     const qualityValues = ["Poor", "Average", "Great"];
+    const [population, setPopulation] = useState('')
+    const [quality, setQuality] = useState('')
+    const [rating, setRating] = useState('')
+
+
     const [showGroup, setShowGroup] = useState(false);
     const [modalEvent, setModalEvent] = useState();
 
@@ -21,20 +27,32 @@ const InfoWindow = (props) => {
         setShowCreateGroupModal(false)
     }
     const [fav, setFav] = React.useState(false);
-    function handleFav() {
-        setFav(!fav)
-        if (fav == true) {
-            //save it to database
-        } else {
-            //or delete it from database
-        }
-    }
+
     function handleGroupClick(event) {
         setShowGroup(true);
     }
     function handleGroupClose() {
         setShowGroup(false)
     }
+    const onChangeQuality = e => {
+        setQuality(e.target.value);
+      }
+    const onChangePopulation = e => {
+        setPopulation(e.target.value);
+      }
+    const onChangeRating = e => {
+        setRating(e.target.value);
+      }
+    const createReview = e => {
+        e.preventDefault();
+        // do something here
+        const data = new FormData(e.target);
+        data.append('quality', data.get('quality'));
+        data.append('population', data.get('population'));
+        data.append('rating', data.get('rate'));
+        reviewService.createReview(props.id,data.get('quality'),data.get('population'), data.get('rate'))
+        }
+
     return (
         <div className="infoWindowStyle">
             <div className='windowHeader'></div>
@@ -72,19 +90,19 @@ const InfoWindow = (props) => {
                         <div className="review-popup">
                             <div className="input-fields">
                                 <div className="category-dropBox"><b>Park Quality:</b>
-                                    <select name="quality-items" id="quality-items">
+                                    <select name="quality" id="quality-items" onChange={onChangeQuality}>
                                         <option value="Poor">Poor</option>
                                         <option value="Average">Average</option>
                                         <option value="Great">Great</option>
                                     </select>
                                     <div className="category-dropBox"><b>Park Population:</b></div>
-                                    <select name="population-items" id="population-items">
+                                    <select name="population" id="population-items" onChange={onChangePopulation}>
                                         <option value="Low">Low</option>
                                         <option value="Average">Average</option>
                                         <option value="High">High</option>
                                         <option value="Packed">Packed</option>
                                     </select>
-                                    <div className="rate">
+                                    <div className="rate" >
                                         <input type="radio" id="star5" name="rate" value="5" />
                                         <label htmlFor="star5" title="text">5 stars</label>
                                         <input type="radio" id="star4" name="rate" value="4" />
@@ -101,7 +119,7 @@ const InfoWindow = (props) => {
                         </div>
                     </Modal.Body>
                     <Modal.Footer className="d-flex justify-content-between">
-                        <Button variant="primary" onClick={handleGroupClose}>
+                        <Button variant="primary" onClick={createReview}>
                             Confirm Group
                         </Button>
                         <Button variant="secondary" onClick={handleGroupClose}>
