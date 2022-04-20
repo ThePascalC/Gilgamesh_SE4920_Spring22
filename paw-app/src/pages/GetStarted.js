@@ -108,17 +108,17 @@ export default class Register extends Component {
   }
   render() {
     return (
-      <div className="container">
-        <div className='boxOne'>
+      <div className="start-container">
+        <div className='start-boxOne'>
           <div>
             <h2><span className='welcome'>Welcome To Pawsible</span></h2>
           </div>
           <div className="line"></div>
           <div>
-            <p className='container-p'>Create an account to start finding a park fit <br></br>for your four legged friend</p>
+            <p className='start-container-p'>Create an account to start finding a park fit <br></br>for your four legged friend</p>
           </div>
         </div>
-        <div className="card card-container">
+        <div className="start-card card-container">
           <Form
             onSubmit={this.handleRegister}
             ref={c => {
