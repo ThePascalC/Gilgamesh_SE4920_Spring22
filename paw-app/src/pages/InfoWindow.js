@@ -72,13 +72,13 @@ const InfoWindow = (props) => {
             <div className='Top-info'>
                 <div className='Park-Info'>
                     <h3>{props.title}</h3>
-                    <h4>Rating: {isNaN(parkReviewInfo.rating) ? 'Not Rated' : (Math.round(parseFloat(parkReviewInfo.rating) * 10) / 10) + 1 + "/5"}</h4>
+                    <h4>Rating: {isNaN(parkReviewInfo.rating) ? 'Not Rated' : (Math.round(parseFloat(parkReviewInfo.rating) * 10) / 10) + "/5"}</h4>
                     <h6>Address: {props.address}</h6>
                 </div>
             </div>
             <div className='mid-info'>
-                <h5>Population: {populationValues[parseInt(parkReviewInfo.population)-1]}</h5>
-                <h5>Quality: {qualityValues[parseInt(parkReviewInfo.quality)-1]}</h5>
+                <h5>Population: {populationValues[parseInt(parkReviewInfo.population)]}</h5>
+                <h5>Quality: {qualityValues[parseInt(parkReviewInfo.quality)]}</h5>
             </div>
             <div className='bottom-info'>
                 <Modal show={showGroup} onHide={handleGroupClose}>

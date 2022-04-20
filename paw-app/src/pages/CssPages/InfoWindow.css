@@ -9,6 +9,7 @@
     background-color: #0b2f4a;
     border-radius: 8px;
     box-shadow: 0 2px 7px 1px rgb(0 0 0 / 30%);
+    z-index: 1000;
 }
 .windowHeader {
     height: 20%;
