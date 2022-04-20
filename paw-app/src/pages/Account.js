@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import AuthService from "../services/auth.service";
 import { useEffect,useState } from 'react';
 import { useLocation } from "react-router-dom";
+import profile from '../path/Profile.jpg';
+import doge from '../path/doge.jpg';
+import './CssPages/Account.css';
 function AccountPage() {
   function logOut(){
     AuthService.logout();
@@ -12,11 +15,11 @@ function AccountPage() {
   return (
     <div className="container-fluid">
       <div className="card" style={{margin: '0 auto', width: '40%', padding: '20px'}}>
-          <img src="#" alt="Profile Picture"></img>
+          <img className="profile-pic" src={doge} alt="Profile Picture"></img>
           <h3 className="card-title">
             <strong>{currentUser.username}</strong>
           </h3>
-          <p>
+          <p className="profile-id">
           <strong>Id:</strong>{" "}
           {currentUser.id}
         </p>
