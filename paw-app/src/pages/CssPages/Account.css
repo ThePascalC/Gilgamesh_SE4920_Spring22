@@ -1,0 +1,25 @@
+.container-fluid{
+    margin-top: 10%;
+    margin-bottom: 20%;
+}
+.profile-pic{
+    border-radius: 50%;
+    height: 20%;
+    width: 20%;
+    margin: auto;
+}
+.card{
+    margin: auto;
+    width: 10%;
+}
+.card-title{
+    margin: auto;
+    width: 10%;
+}
+.profile-id{
+    margin: auto;
+}
+.card-text{
+    margin: auto;
+    
+}
