@@ -60,9 +60,9 @@ const InfoWindow = (props) => {
         e.preventDefault();
         // do something here
         console.log(props.id, qualityValues.indexOf(quality), populationValues.indexOf(population), ratingValues.indexOf(rating))
-        reviewService.createReview(props.id, qualityValues.indexOf(quality)+1, populationValues.indexOf(population)+1, ratingValues.indexOf(rating)+1)
+        reviewService.createReview(props.id, parseInt(qualityValues.indexOf(quality))+1, populationValues.indexOf(population)+1, ratingValues.indexOf(rating)+1)
         handleGroupClose();
-        //props.setTrigger(false);
+        props.setTrigger(false);
     }
     
     return (
@@ -77,8 +77,8 @@ const InfoWindow = (props) => {
                 </div>
             </div>
             <div className='mid-info'>
-                <h5>Population: {populationValues[parseInt(parkReviewInfo.population)]}</h5>
-                <h5>Quality: {qualityValues[parseInt(parkReviewInfo.quality)]}</h5>
+                <h5>Population: {populationValues[parseInt(parkReviewInfo.population)-1]}</h5>
+                <h5>Quality: {qualityValues[parseInt(parkReviewInfo.quality)-1]}</h5>
             </div>
             <div className='bottom-info'>
                 <Modal show={showGroup} onHide={handleGroupClose}>
@@ -94,24 +94,24 @@ const InfoWindow = (props) => {
                                 <div className="review-fields">
                                 <div className="form-group" style={{top: 0}}>
                                     <div className="Quality-dropBox"><b>Park Quality:</b>
-                                        <select className='form-select' name="quality" id="quality-items" onChange={onChangeQuality}>
+                                        <select className='form-select' name="quality" id="quality-items" onChange={onChangeQuality} required>
                                             <option value="Poor">Poor</option>
-                                            <option value="Average">Average</option>
+                                            <option value="Average" selected>Average</option>
                                             <option value="Great">Great</option>
                                         </select>
                                         <div className="population-dropBox"><b>Park Population:</b>
-                                            <select className='form-select' name="population" id="population-items" onChange={onChangePopulation}>
+                                            <select className='form-select' name="population" id="population-items" onChange={onChangePopulation} required>
                                                 <option value="Low">Low</option>
-                                                <option value="Medium">Medium</option>
+                                                <option value="Medium" selected>Medium</option>
                                                 <option value="High">High</option>
                                                 <option value="Packed">Packed</option>
                                             </select>
                                         </div>
                                         <div className="rating-dropBox"><b>Park Rating:</b>
-                                            <select  className='form-select' name="rating-items" id="population-items" onChange={onChangeRating}>
+                                            <select  className='form-select' name="rating-items" id="rating-items" onChange={onChangeRating} required>
                                                 <option value="One">1</option>
                                                 <option value="Two">2</option>
-                                                <option value="Three">3</option>
+                                                <option value="Three" selected>3</option>
                                                 <option value="Four">4</option>
                                                 <option value="Five">5</option>
                                             </select>
