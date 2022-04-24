@@ -4,8 +4,6 @@
     position: relative;
     left: 8.5%;
     top: 15%;
-    margin-top: 2%;
-    margin-bottom: 5%;
     animation-name: fadeIn;
     animation-fill-mode: both;
     animation-duration: 1s;

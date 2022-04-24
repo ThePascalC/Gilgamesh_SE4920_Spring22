@@ -64,7 +64,15 @@ const InfoWindow = (props) => {
         handleGroupClose();
         props.setTrigger(false);
     }
-    
+    const validateQuality = () => {
+
+    } 
+    const validatePopulation = () => {
+        
+    } 
+    const validateRating = () => {
+        
+    } 
     return (
         <div className="infoWindowStyle">
             <div className='windowHeader'></div>
@@ -95,23 +103,26 @@ const InfoWindow = (props) => {
                                 <div className="form-group" style={{top: 0}}>
                                     <div className="Quality-dropBox"><b>Park Quality:</b>
                                         <select className='form-select' name="quality" id="quality-items" onChange={onChangeQuality} required>
+                                         <option selected disabled hidden>How is the park quality?</option>
                                             <option value="Poor">Poor</option>
-                                            <option value="Average" selected>Average</option>
+                                            <option value="Average">Average</option>
                                             <option value="Great">Great</option>
                                         </select>
                                         <div className="population-dropBox"><b>Park Population:</b>
                                             <select className='form-select' name="population" id="population-items" onChange={onChangePopulation} required>
+                                                <option selected disabled hidden>How busy is the park?</option>
                                                 <option value="Low">Low</option>
-                                                <option value="Medium" selected>Medium</option>
+                                                <option value="Medium">Medium</option>
                                                 <option value="High">High</option>
                                                 <option value="Packed">Packed</option>
                                             </select>
                                         </div>
                                         <div className="rating-dropBox"><b>Park Rating:</b>
                                             <select  className='form-select' name="rating-items" id="rating-items" onChange={onChangeRating} required>
+                                                <option selected disabled hidden>Select a Rating 1-5</option>
                                                 <option value="One">1</option>
                                                 <option value="Two">2</option>
-                                                <option value="Three" selected>3</option>
+                                                <option value="Three">3</option>
                                                 <option value="Four">4</option>
                                                 <option value="Five">5</option>
                                             </select>
