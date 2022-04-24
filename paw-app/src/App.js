@@ -29,13 +29,13 @@ function App() {
   return (
     <Layout>
       <Switch>
-      <Route path='/' exact component={MapPage }>
+      <Route path='/' exact component={HowItWorksPage }>
         </Route>
         <Route path='/Data' exact component={Data }>
         </Route>
         <Route path='/get-started' component={GetStartedPage }>
         </Route>
-        <Route path='/how-it-works' component={ HowItWorksPage }>
+        <Route path='/map' component={ MapPage }>
         </Route>
         <Route path='/sign-in' component={ SignInPage }>
         </Route>
