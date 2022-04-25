@@ -15,15 +15,16 @@ function AccountPage() {
   return (
     <div className="container-fluid">
       <div className="card" style={{margin: '0 auto', width: '40%', padding: '20px'}}>
-          <img className="profile-pic" src={doge} alt="Profile Picture"></img>
-          <h3 className="card-title">
+          <img className="profile-pic" src={doge} alt="Profile"></img>
+          <h3 className="card-title" style={{textAlign: 'center', marginTop: '15px'}}>
             <strong>{currentUser.username}</strong>
           </h3>
-          <p className="profile-id">
+
+        <div className="card-text">
+        <p className="profile-id">
           <strong>Id:</strong>{" "}
           {currentUser.id}
         </p>
-        <div className="card-text">
         <p>
           <strong>Email:</strong>{" "}
           {currentUser.email}

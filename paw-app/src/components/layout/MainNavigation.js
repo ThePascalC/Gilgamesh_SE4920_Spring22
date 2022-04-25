@@ -6,6 +6,7 @@ import { useEffect,useState } from 'react';
 // import pawLogo from './path/images.png';
 function MainNavigation() {
   const [currentUser, setCurrentUser] = useState('');
+  const [adminBoard, showAdminBoard] = useState(false);
 
   function logOut(){
     AuthService.logout();
@@ -15,9 +16,13 @@ function MainNavigation() {
     const user = AuthService.getCurrentUser();
     if(user){
       setCurrentUser(user);
+      if(user.roles.includes("ROLE_ADMIN")){
+        showAdminBoard(true);
+      }
     }
   },[]);
 console.log(currentUser)
+console.log(adminBoard);
   return (
     <header className={classes.header}>
       <div className={classes.logo}><Link to='/'>
@@ -25,16 +30,20 @@ console.log(currentUser)
         Pawsible</Link></div>
       <nav>
         <ul>
-          {/* <li>
-            <Link to='/Data'>Data</Link>
-          </li> */}
+        {adminBoard ? (
+              <li className="nav-item">
+                <Link to={"/admin"} className="nav-link">
+                  Admin Board
+                </Link>
+              </li>
+            ) : null}
           {currentUser ? (
             <>
           <li>
-            <Link to='/'>Dog Parks</Link>
+            <Link to='/map'>Dog Parks</Link>
           </li>            
           <li>
-            <Link to='/how-it-works'>About Us</Link>
+            <Link to='/'>About Us</Link>
           </li>
           <li>
             <Link to={{pathname: '/Account', state:{currentUser: currentUser} }}>{currentUser.username}</Link>
@@ -49,7 +58,7 @@ console.log(currentUser)
           (
             <>
           <li>
-            <Link to='/how-it-works'>About Us</Link>
+            <Link to='/'>About Us</Link>
           </li>
           <li>
             <Link to='/get-started'>Register</Link>

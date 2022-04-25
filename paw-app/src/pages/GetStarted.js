@@ -109,6 +109,7 @@ export default class Register extends Component {
   render() {
     return (
       <div className="start-container">
+        <div></div>
         <div className='start-boxOne'>
           <div>
             <h2><span className='welcome'>Welcome To Pawsible</span></h2>

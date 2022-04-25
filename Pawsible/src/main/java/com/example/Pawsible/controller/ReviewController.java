@@ -36,4 +36,10 @@ public class ReviewController {
     public Set<ParkReviewInfo> getParkReviewInfo(@RequestParam Long park_id){
         return reviewRepository.getParkInformation(park_id);
     }
+
+    @GetMapping("count")
+    public int getReviewCount(){
+        return reviewRepository.getReviewCount();
+    }
+
 }

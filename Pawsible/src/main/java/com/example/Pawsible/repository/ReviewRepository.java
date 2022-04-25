@@ -14,4 +14,6 @@ public interface ReviewRepository extends JpaRepository<Review, Long> {
     @Query(value = "select SUM(r.population) / COUNT(r.population) as population, SUM(r.quality) / COUNT(r.quality) as quality, SUM(r.rating) / COUNT(r.rating) as rating from reviews r where (r.park_id = :id)", nativeQuery = true)
     Set<ParkReviewInfo> getParkInformation(@Param("id") Long id);
 
+    @Query(value = "select COUNT(r.id) as reviewCount from reviews r", nativeQuery = true)
+    int getReviewCount();
 }
