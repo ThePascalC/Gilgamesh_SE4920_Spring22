@@ -21,8 +21,7 @@ function MainNavigation() {
       }
     }
   },[]);
-console.log(currentUser)
-console.log(adminBoard);
+
   return (
     <header className={classes.header}>
       <div className={classes.logo}><Link to='/'>
