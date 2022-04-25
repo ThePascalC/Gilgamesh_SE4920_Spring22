@@ -19,10 +19,6 @@ const InfoWindow = (props) => {
     const [modalEvent, setModalEvent] = useState();
     const [showCreateGroupModal, setShowCreateGroupModal] = useState(false);
     const [parkReviewInfo, setParkReviewInfo] = useState('')
-    const [popGood, setPopGood] = useState(false);
-    const [qualGood, setQualGood] = useState(false);
-    const [rateGood, setRatingGood] = useState(false);
-    const [isValid, setIsValid] = useState(false);
 
     useEffect(()=>{
         getParkInfo();
@@ -69,19 +65,14 @@ const InfoWindow = (props) => {
         props.setTrigger(false);
     }
     const validateQuality = () => {
-        setQualGood(true);
+
     } 
     const validatePopulation = () => {
-        setPopGood(true);
+        
     } 
     const validateRating = () => {
-        setRatingGood(true);
+        
     } 
-    const validateForm = () => {
-        if(qualGood && popGood && rateGood){
-            
-        }
-    }
     return (
         <div className="infoWindowStyle">
             <div className='windowHeader'></div>
